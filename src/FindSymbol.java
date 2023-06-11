@@ -10,13 +10,13 @@ public class FindSymbol {
             symbol = scanner.nextLine();
         } while (symbol.length()!=1);
 
-        System.out.println("Ви символ: " + symbol);
+        System.out.println("Ви символ: <" + symbol+">");
         char conventSign = symbol.charAt(0);
         System.out.println("Введіть строку, в якій хочете знайти символ");
         String word = scanner.nextLine();
-        System.out.println("Ви ввели строку <"+word+"> в якій  знайшли символ "+conventSign+" "
+        System.out.println("Ви ввели строку <"+word+"> в якій  знайшли символ <"+conventSign+"> "
                 +findSymbolOccurrence(word, conventSign)+" разів");
-        scanner.close();
+
     }
     public static int findSymbolOccurrence(String str, char symbol) {
         int count = 0;
