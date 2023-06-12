@@ -6,8 +6,9 @@ public class ReverseAndPalindrome {
 
     }
     public boolean isPalindrome (String palindrome){
-        StringBuilder builder = new StringBuilder(palindrome.toLowerCase().replaceAll("[^a-zа-я]", ""));
+        StringBuilder builder = new StringBuilder(palindrome.toLowerCase().replaceAll("[^A-zа-я]", ""));
+        String strPalindrome = String.valueOf(builder);
         builder.reverse();
-        return String.valueOf(builder).equals(palindrome);
+        return String.valueOf(builder).equals(strPalindrome);
     }
 }
