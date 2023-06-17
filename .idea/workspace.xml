@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d4d184cc-350a-45a7-8f82-449c5f158288" name="Changes" comment="corrected  work">
+    <list default="true" id="d4d184cc-350a-45a7-8f82-449c5f158288" name="Changes" comment="corrected  GuessingGame">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/GuessingGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/GuessingGame.java" afterDir="false" />
     </list>
@@ -92,7 +92,14 @@
       <option name="project" value="LOCAL" />
       <updated>1686596264827</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="corrected  GuessingGame">
+      <created>1686991562657</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1686991562657</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -110,6 +117,7 @@
     <MESSAGE value="Start work" />
     <MESSAGE value="End work" />
     <MESSAGE value="corrected  work" />
-    <option name="LAST_COMMIT_MESSAGE" value="corrected  work" />
+    <MESSAGE value="corrected  GuessingGame" />
+    <option name="LAST_COMMIT_MESSAGE" value="corrected  GuessingGame" />
   </component>
 </project>

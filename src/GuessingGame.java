@@ -1,6 +1,7 @@
 import java.util.Scanner;
 
 public class GuessingGame {
+    StringBuilder result1 = new StringBuilder();
     public String randomFood() {
         String[] food = {"apple", "orange", "lemon", "banana", "apricot", "avocado",
                 "broccoli", "carrot", "cherry", "garlic", "grape", "melon", "leak", "kiwi",
@@ -8,7 +9,7 @@ public class GuessingGame {
                 "pineapple", "pumpkin", "potato"};
         int a = food.length;
         a = (int) (Math.random() * a);
-        return food[a - 1];
+        return food[a-1];
 
     }
 
@@ -22,28 +23,29 @@ public class GuessingGame {
         String food = randomFood();
         String code = "###############";
         System.out.println("Загадана назва: " + code);
+
         while (true) {
             System.out.println("Ваша відповідь? ");
             String playerChoice = scanner.next();
-            StringBuilder result = new StringBuilder();
+            System.out.println(food);
+            result1.append(code);
             for (int i = 0; i < food.length(); i++) {
                 char guessedChar = (i < playerChoice.length()) ? playerChoice.charAt(i) : '#';
                 char secretChar = food.charAt(i);
 
                 if (guessedChar == secretChar) {
-                    result.append(guessedChar);
-                } else {
-                    result.append("#");
-                }
+
+                    if (result1.charAt(i)=='#'){
+                        result1.setCharAt(i,secretChar);}
+                    }
             }
-            result.append(code);
-            System.out.println(result.subSequence(0,14));
             if (playerChoice.equalsIgnoreCase(food)) {
                 System.out.println("Ви вгадали!");
                 break;
             } else {
                 System.out.println("Ви не вгадали, спробуй ще");
             }
+            System.out.println(result1.subSequence(0,14));
         }
     }
 
