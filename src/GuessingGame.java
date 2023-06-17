@@ -21,18 +21,29 @@ public class GuessingGame {
                 "3. Граемо до тих пір, поки не вгадаешь!");
         String food = randomFood();
         String code = "###############";
-        String receivedFood = food.substring(0, 2) + "###############";
         System.out.println("Загадана назва: " + code);
         while (true) {
             System.out.println("Ваша відповідь? ");
             String playerChoice = scanner.next();
+            StringBuilder result = new StringBuilder();
+            for (int i = 0; i < food.length(); i++) {
+                char guessedChar = (i < playerChoice.length()) ? playerChoice.charAt(i) : '#';
+                char secretChar = food.charAt(i);
+
+                if (guessedChar == secretChar) {
+                    result.append(guessedChar);
+                } else {
+                    result.append("#");
+                }
+            }
+            result.append(code);
+            System.out.println(result.subSequence(0,14));
             if (playerChoice.equalsIgnoreCase(food)) {
                 System.out.println("Ви вгадали!");
                 break;
             } else {
                 System.out.println("Ви не вгадали, спробуй ще");
             }
-            System.out.println(" Підсказка "+receivedFood);
         }
     }
 
